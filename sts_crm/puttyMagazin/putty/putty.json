@@ -1,0 +1,43 @@
+{
+    "shop_id": "e7c1d7f7-a292-46ea-b86c-391403914a56",
+    "send_magazinID": "5ed21bd1-b8be-429c-8e59-0c2f3514d870",
+    "tavarlar": [
+           {
+            "id": 4000,
+            "product_count": null,
+            "product_serena": [ "ZK139941",
+                "mN119949",
+                "Kj168030",
+                "CT188465",
+                "Nq104653",
+                "FE104804",
+                "Qi199130",
+                "jY125900",
+                "AP105978",
+                "eO141628"],
+           "price": 4092,
+           "material_nomer": 40853377
+        },
+        {
+            "id": 4001,
+            "product_count": null,
+            "product_serena": [      "pn175186",
+                "vU140932",
+                "lB154938",
+                "CC110677",
+                "jF153112",
+                "Nf103235",
+                "vu168730",
+                "eE189264",
+                "wf102315",
+                "pj117015",
+                "dE147179"
+                       ],
+             "price": 8227,
+            "material_nomer": 74489963
+
+        }
+        
+     
+    ]
+}

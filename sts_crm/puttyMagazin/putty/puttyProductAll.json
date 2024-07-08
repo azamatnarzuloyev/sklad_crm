@@ -1,0 +1,26 @@
+{ 
+    "shop_id": "16951b44-a50d-4717-9dcc-a4aa7a1f7251", 
+    "send_maagzinId":"04b76294-a6f2-4bce-b0d2-a85b7c962269",
+    
+    
+    "tavarlar" : [
+    {    
+      "id": 7200,
+      "product_count": null,
+      "product_serena": [  "sdfgh",
+                "sdfg3456h"],
+      "product_name": "Kamera Ds-2Cd1043G0-I",
+      "material_nomer":23456543454
+      },
+  
+     {    
+      "id": 7201,
+      "product_count": null,
+      "product_serena": [  "sdfgh",
+                "sdfg3456h"],
+      "product_name": "Kamera Ds-2Cd1043G0-I",
+      "material_nomer":23456543454
+      }
+  
+]
+}

@@ -1,0 +1,21 @@
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
+
+from rest_framework.generics import GenericAPIView
+from rest_framework.response import Response
+from rest_framework.views import APIView
+
+from common.routers import CustomViewRouter
+from {{ app_name }} import serializers
+
+if TYPE_CHECKING:
+    from rest_framework.request import Request
+
+router = CustomViewRouter()
+
+
+@router.register(r"{{ app_name }}/", name="{{ app_name }}")
+class {{ camel_case_app_name }}View(APIView):
+    def get(self, request, format=None):
+        pass

@@ -1,0 +1,39 @@
+upstream django {
+    server django_app:8000;
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name {domain};
+
+    location / {
+        rewrite ^ https://$host$request_uri? permanent;
+    }
+
+    location ~ /.well-known/acme-challenge {
+        allow all;
+        root /tmp/acme_challenge;
+    }
+}
+
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl http2;
+    server_name {domain};
+
+    ssl_certificate /etc/letsencrypt/live/{domain}/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/{domain}/privkey.pem;
+
+    location / {
+        proxy_pass http://django;
+    }
+
+    location /static/ {
+        alias /app/static/;
+    }
+
+    location /media/ {
+        alias /app/media/;
+    }
+}

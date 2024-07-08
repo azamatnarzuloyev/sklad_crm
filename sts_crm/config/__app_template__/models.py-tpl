@@ -1,0 +1,12 @@
+from __future__ import annotations
+
+from django.db import models
+
+
+class {{ camel_case_app_name }}Model(models.Model):
+
+
+    #create_at = models.DateTimeField(auto_now_add=True , blank=True)
+    #update_at = models.DateTimeField(auto_now=True , blank=True)
+    def __str__(self) -> str:
+        raise NotImplementedError

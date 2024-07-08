@@ -1,0 +1,74 @@
+version: '3.8'
+
+services:
+  web:
+    build: ./sts_crm
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./sts_crm/:/usr/src/app
+    ports:
+      - 8000:8000
+    env_file:
+      - ./.env.dev
+    depends_on:
+      - db
+      - redis_broker
+
+  db:
+    image: postgres:15
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=chat_admin
+      - POSTGRES_PASSWORD=chat_admin
+      - POSTGRES_DB=chat_db
+
+  redis_broker:
+    image: redis:7.0.4
+    ports:
+      - 6378:6379
+    
+    volumes:
+      - redis_cache:/var/lib/redis/data/
+  celery:
+    build: 
+      context: ./sts_crm
+      dockerfile: Dockerfile
+    command: celery -A config worker -l INFO
+
+    env_file:
+      - ./.env.dev
+
+    depends_on:
+      - web
+      - rabbitmq
+
+    restart: always
+
+  celery_beat:
+    build: 
+      context: ./sts_crm
+      dockerfile: Dockerfile
+    command: celery -A config beat -l info  -S django
+
+    env_file:
+      - ./.env.dev
+
+    depends_on:
+      - web
+      - rabbitmq
+
+    restart: always
+
+  rabbitmq:
+    hostname: rabbitmq
+    image: "rabbitmq:3-management"
+
+    env_file:
+      - ./env.dev.rabbitmq
+
+    restart: always
+
+volumes:
+  postgres_data:
+  redis_cache:

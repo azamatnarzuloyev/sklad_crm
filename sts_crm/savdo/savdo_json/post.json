@@ -1,0 +1,64 @@
+{
+    "product_arr":[
+       {
+           "product_id":251,
+           "product_name":"dsdsdsd",
+           "product_count":null,
+           "product_serena": [ "dsds32322d4dsds34",
+                       "do183875",
+                       "Wv106020"],
+           "material_nomer": 3232233232,
+           "price": 1111,
+           "tavar_ckidka": null,
+           "skidka_foiz": 10
+       }
+    ],
+   "hisobot": {
+     "tavar_summasi": 10000,
+     "jami_skidka": 1000,
+     "olingan_summa": 111,
+     "mahsulotUchun_tolov": 1111,
+     "tushgan_cashback_summa": null,
+     "yechilgan_cashback_summ": null,
+     "depozitga_tushgan_summa": null
+   },
+   "tolov_usullar": {
+     "naxt": {
+       "active":"sddsdsdsdsd",
+       "summa":"1111",
+       "check": false
+     },
+     "plastik": {
+       "active": false,
+       "summa": 0,
+       "check": false
+     },
+     "joyidaTolov": {
+       "active": false,
+       "summa": 0,
+       "check": false,
+       "id_raqam": null
+     },
+     "qarz": {
+       "active": false,
+       "summa": 0,
+       "update_at": null,
+       "eslatma": {
+         "date": null,
+         "status": 0
+       }
+     },
+     "depozit": {
+       "active": false,
+       "summa": 1111,
+       "check": false
+     },
+     "shartnoma": {
+       "active": false,
+       "summa": 1111,
+       "check": false,
+       "id_raqam": null
+     }
+   }
+ }
+
