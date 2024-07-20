@@ -38,7 +38,7 @@ def user_notification(phone, title, body_data):
     }
     headers_data = {
               'Content-Type': 'application/json',
-              'Authorization':'key=AAAAXB3zJOY:APA91bEQjqIL5z0pyyJJvryzlwM4rPI7fS-RYWd5JqI-2tVu8zzEOKBTS5v87qodAiqOiENKVDqz05FGHKR9bQD5I1ArCn1sZ_5WK-X248pHRSnU1FpC2xtWVxb-Z1lxzjNzzksfTDkO'
+              'Authorization':''
 
     }
     data = requests.post(url="https://fcm.googleapis.com/fcm/send/", json= body, headers=headers_data)
